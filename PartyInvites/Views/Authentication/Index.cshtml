@@ -1,0 +1,52 @@
+﻿@model PartyInvites.Models.RegistrationResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="header" class="header nav">
+        <ul>
+            <li class="nav-item"> @Html.ActionLink("Home", "Home")</li>
+            <li class="nav-item"></li>
+            <li class="nav-item"> @Html.ActionLink("Contacts", "Contacts") </li>
+            <li class="nav-item"> @Html.ActionLink("Site map", "SiteMap") </li>
+            <li class="nav-item"> @Html.ActionLink("Sign up", "Registration") </li>\
+            <li class="nav-item"> @Html.ActionLink("Log in", "Authentication")</li>
+        </ul>
+    </div>
+    <div class="content">
+        @using (Html.BeginForm())
+        {
+        <h2> We're gonna have a good time. Join us!</h2>
+        <p>Your name: @Html.TextBoxFor(x => x.Name) </p>
+        <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+        <p>
+            Do you wanna receive news and so on?
+            @Html.DropDownListFor(x => x.ReceivesNotifications, new[] {
+                new SelectListItem() { Text = "Да, конечно я буду", Value = Boolean.TrueString},
+                new SelectListItem() { Text = "Нет, я не смогу", Value = Boolean.FalseString}
+            })
+        </p>
+
+        <p>
+
+        </p>
+        <input type="submit" value="Auth" />
+        }
+    </div>
+    <div class="footer">
+        <p>
+            some staff about smth
+        </p>
+    </div>
+</body>
+</html>

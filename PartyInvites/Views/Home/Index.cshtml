@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="header" class="header nav">
+        <ul>
+            <li class="nav-item"> @Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="nav-item"></li>
+            <li class="nav-item"> @Html.ActionLink("Contacts", "Index", "Contacts") </li>
+            <li class="nav-item"> @Html.ActionLink("Site map", "Index", "SiteMap") </li>
+            <li class="nav-item"> @Html.ActionLink("Sign up", "Index", "Registration") </li>
+            <li class="nav-item"> @Html.ActionLink("Log in", "Index", "Authentication")</li>
+        </ul>
+    </div>
+    <div class="content"> 
+        <h1>
+            Party easily!
+        </h1>
+        <p>
+            bla bla bla about how cool it is to party
+        </p>
+    </div>
+    <div class="footer">
+        <p> 
+            some staff about smth
+        </p>
+    </div>
+</body>
+</html>
